@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* overflow: hidden; */
+}
+
+/* .gym .abs .font {
+  display: none;
+} */
+
+.gym .abs .font img {
+  width: 100%;
+  position: absolute;
+  height: 200px;
+}
+
+.gym .abs .font .title {
+  position: relative;
+  padding: 20px;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.gym .abs .font button {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: larger;
+  background-color: maroon;
+  color: #fff;
+  top: 50px;
+  left: 70%;
+}
+
+
+/* .gym .abs #font2 {
+    display: none;
+} */
+
+.gym .abs .font2 .img{
+    background-color: hsl(0, 0%, 0%);
+    color: #000;
+    width: 100%;
+    height: 120px;
+    position: absolute;
+}
+
+.gym .abs .font2 img {
+  width: 100%;
+  position: absolute;
+  height: 120px;
+  margin: 0;
+  top: 0;
+  opacity: 0.8;
+  background-color: #000;
+  color: #000;
+  /* display: none; */
+  /* filter: saturate(5); */
+}
+
+.gym .abs .font2 .back{
+    position: fixed;
+    color: #fff;
+    font-size: 30px;
+    margin: 10px;
+    padding: 0 20px 10px 15px;
+    background-color: #0000005b;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.gym .abs .font2 .title{
+position: relative;
+left: 40%;
+color: #fff;
+}
+
+.gym .abs .font2 .levels{
+    margin-top: 91px;
+
+}
+
+.gym .abs .font2 .levels .level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #dacfcf;
+}
+
+.gym .abs .font2 .level .numb {
+    background-color: maroon;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.gym .abs .font2 .level .text {
+    font-size: 30px;
+}
