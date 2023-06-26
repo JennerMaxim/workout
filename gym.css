@@ -5,9 +5,9 @@
   /* overflow: hidden; */
 }
 
-/* .gym .abs .font {
+.gym .abs .font {
   display: none;
-} */
+}
 
 .gym .abs .font img {
   width: 100%;
@@ -35,9 +35,9 @@
 }
 
 
-/* .gym .abs #font2 {
+.gym .abs #font2 {
     display: none;
-} */
+}
 
 .gym .abs .font2 .img{
     background-color: hsl(0, 0%, 0%);
@@ -69,6 +69,7 @@
     background-color: #0000005b;
     border-radius: 50%;
     text-align: center;
+    display: none;
 }
 
 .gym .abs .font2 .title{
@@ -100,4 +101,67 @@ color: #fff;
 
 .gym .abs .font2 .level .text {
     font-size: 30px;
+}
+
+/* LEVEL 1 */
+.gym .abs .level1 .header {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  top: 0;
+}
+
+.gym .abs .level1 .header .back{
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+.gym .abs .level1 .header .title{
+  font-weight: bold;
+}
+
+.gym .abs .level1 .contents {
+  margin: 44px 0 50px 0;
+}
+
+.gym .abs .level1 .contents .title {
+  background-color: #e6e4e4;
+  padding: 10px;
+}
+
+.gym .abs .level1 .contents .content .workouts{
+  display: flex;
+  justify-content: space-between;
+  /* width: 100%; */
+  padding: 0 20px;
+  align-items: center;
+  border: 1px solid #a79a9a;
+}
+
+.gym .abs .level1 .contents .content .workouts .left{
+  padding: 10px 0;
+}
+
+.gym .abs .level1 .contents .content .workouts .left .workout{
+  padding-bottom: 5px;
+}
+
+.gym .abs .level1 .contents .content .workouts .left .time{
+  color: #9c9393;
+}
+
+.gym .abs .level1 .contents .footer{
+  background-color: maroon;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
