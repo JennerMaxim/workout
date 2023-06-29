@@ -261,3 +261,36 @@
 /* .gym .abs .rest .next-workout img{
   padding: 10px;
 } */
+
+/* LEVEL ONE */
+
+/* Workout */
+.gym .abs .level-one{
+  margin-top: 40px;
+  display: none;
+}
+.gym .abs .level-one .img-workout img{
+  width: 100%;
+}
+
+.gym .abs .level-one .title{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.gym .abs .level-one .title span{
+  padding-left: 5px;
+  color: maroon;
+}
+
+.gym .abs .level-one .count {
+  position: fixed;
+  bottom: 10px;
+  left: 40%;
+  color: #fff;
+  background-color: maroon;
+  padding: 1px 13px;
+  border-radius: 50%;
+  font-size: 50px;
+}

@@ -1,14 +1,13 @@
 let level = document.getElementById("level");
 let level1 = document.getElementById("level1");
 let level1Display = document.getElementById("level1Display");
-let levelTodo = document.getElementById("level-do");
 let timeCount = document.getElementById("timeCount");
 let downCount = document.getElementById("downCount");
 let header = document.getElementById("header");
 let ready = document.getElementById("ready");
 let footer = document.getElementById("footer");
 let jumping = document.getElementById("jumping");
-let countRest = document.getElementById("count-rest");
+// let countRest = document.getElementById("count-rest");
 let rest = document.getElementById("rest");
 
 let setLevel = () => {
@@ -17,9 +16,9 @@ let setLevel = () => {
       let { numb, text, arrow } = x;
       return `
     <div class="level">
-        <span class="numb">${x.numb}</span>
-        <span class="text">${x.text}</span>
-        <span class="arrow">${x.arrow}</span>
+        <span class="numb">${numb}</span>
+        <span class="text">${text}</span>
+        <span class="arrow">${arrow}</span>
     </div>
     `;
     })
@@ -27,61 +26,17 @@ let setLevel = () => {
 };
 setLevel();
 
-let level1s = [
-  {
-    workout: "JUMPING JACKS",
-    time: "00:20",
-    img: "assets/img/jump.gif",
-  },
-
-  {
-    workout: "ABDOMINAL CRUNCHES",
-    time: "X 5",
-    img: "assets/img/abdo.gif",
-  },
-  {
-    workout: "MOUNTAIN CLIMBER",
-    time: "X 4",
-    img: "assets/img/climber.gif",
-  },
-  {
-    workout: "HEEL TOUCH",
-    time: "X 10",
-    img: "assets/img/heel.gif",
-  },
-  {
-    workout: "PLANK",
-    time: "00:20",
-    img: "assets/img/plank.png",
-  },
-  {
-    workout: "COBRA STRETCH",
-    time: "00:30",
-    img: "assets/img/cobra.jpg",
-  },
-  {
-    workout: "SPINE LUMBAR TWIST STRETCH LEFT",
-    time: "00:30",
-    img: "assets/img/spine_left.png",
-  },
-  {
-    workout: "SPINE LUMBAR TWIST STRETCH RIGTH",
-    time: "00:30",
-    img: "assets/img/spine_right.png",
-  },
-];
-
 let setLevel1 = () => {
   return (level1.innerHTML = level1s
     .map((x) => {
-      let { workout, time, video } = x;
+      let { workout, time, img } = x;
       return `
     <div class="workouts">
       <div class="left">
-        <div class="workout">${x.workout}</div>
-        <div class="time">${x.time}</div>
+        <div class="workout">${workout}</div>
+        <div class="time">${time}</div>
       </div>
-      <img src=${x.img} width="100" height="auto">
+      <img src=${img} width="100" height="auto">
     </div>
     `;
     })
@@ -90,7 +45,7 @@ let setLevel1 = () => {
 setLevel1();
 
 levelTodo.style.display = "none";
-rest.style.display = "none";
+// rest.style.display = "none";
 
 let start = () => {
   level1Display.style.display = "none";
@@ -112,7 +67,7 @@ let start = () => {
       counter.style.display = "none";
       i--;
       if (i <= 10) {
-        countRest.innerHTML = i;
+        // countRest.innerHTML = i;
         if (i <= 3) {
           downCount.style.display = "";
           downCount.innerHTML = i;
@@ -138,7 +93,10 @@ let start = () => {
       if (i === 21) {
         isCountingDown = true;
         levelTodo.style.display = "none";
-        rest.style.display = "";
+        // rest.style.display = "";
+        workoutItems[0].style.display = "";
+        restWorkout();
+
         clearInterval(timer);
       }
     }
@@ -158,13 +116,29 @@ let restWorkout = () => {
   let i = 11;
   let timer = setInterval(() => {
     i--;
-    countRest.innerHTML = i;
-    if (i === 0){
+    // countRest.innerHTML = i;
+    countRest[0].innerHTML = i;
+
+    if (i === 0) {
       clearInterval(timer);
     }
   }, 1000);
 };
-restWorkout();
+
+let workout = document.getElementById("workout");
+
+let showWorkout = () => {
+  let { img, title, count } = x;
+  return (workout.innerHTML = levelOneWorkout.map((x) => {
+    return `
+    <div class="workout">
+      <div class="img-workout">${img}</div>
+      <div class="title">${title}</div>
+      <div class="count">${count}</div>
+    </div>
+    `;
+  }));
+};
 
 // let font = document.getElementById("font");
 // let font2 = document.getElementById("font2");
