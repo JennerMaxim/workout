@@ -1,4 +1,4 @@
-let nextWorkout = document.getElementById("next-workout");
+// let nextWorkout = document.getElementById("next-workout");
 
 let restWorkoutData = [
   {
@@ -57,18 +57,20 @@ let setRestWorkout = () => {
     .map((x) => {
       let { countRest, next, title, numb, img } = x;
       return `
-    <div class="workout-item">
+    <div class="workout-rest">
         <div class="img-count">
             <img src="assets/img/rest.png" width="100%" alt="" />
             <div class="count-rest" id="count-rest"></div>
         </div>
-        <div class="next-workout">
-            <div class="left-content">
-                <div class="next">${next}</div>
-                <div class="workout-title">${title}</div>
-                <div class="numb">${numb}</div>
-            </div>
-            <img src=${img} width="100" alt="" />
+        <div class="width-next-workout">
+          <div class="next-workout">
+              <div class="left-content">
+                  <div class="next">${next}</div>
+                  <div class="workout-title">${title}</div>
+                  <div class="numb">${numb}</div>
+              </div>
+              <img src=${img} width="100" alt="" />
+          </div>
         </div>
     </div>
     `;
@@ -77,14 +79,95 @@ let setRestWorkout = () => {
 };
 setRestWorkout();
 
-let workoutItems = document.querySelectorAll(".workout-item");
-workoutItems[0].style.display = "none";
-workoutItems[1].style.display = "none";
-workoutItems[2].style.display = "none";
-workoutItems[3].style.display = "none";
-workoutItems[4].style.display = "none";
-workoutItems[5].style.display = "none";
-workoutItems[6].style.display = "none";
+let workoutRest = document.querySelectorAll(".workout-rest");
+workoutRest[0].style.display = "none";
+workoutRest[1].style.display = "none";
+workoutRest[2].style.display = "none";
+workoutRest[3].style.display = "none";
+workoutRest[4].style.display = "none";
+workoutRest[5].style.display = "none";
+workoutRest[6].style.display = "none";
 
 let countRest = document.querySelectorAll(".count-rest");
-// console.log(restWorkouts[1].innerHTML)
+
+let decrementRestOne = () => {
+  let i = 31;
+  let countDecrement = setInterval(() => {
+    i--;
+    countRest[1].innerHTML = i;
+    if (i === -1) {
+      workoutRest[1].style.display = "none";
+      workoutLevelOneItems[1].style.display = "";
+      clearInterval(countDecrement);
+    }
+  }, 1000);
+};
+
+let decrementRestTwo = () => {
+  let i = 31;
+  let countDecrement = setInterval(() => {
+    i--;
+    countRest[2].innerHTML = i;
+    if (i === -1) {
+      workoutRest[2].style.display = "none";
+      workoutLevelOneItems[2].style.display = "";
+      clearInterval(countDecrement);
+    }
+  }, 1000);
+};
+
+let decrementRestTree = () => {
+  let i = 31;
+  let countDecrement = setInterval(() => {
+    i--;
+    countRest[3].innerHTML = i;
+    if (i === -1) {
+      workoutRest[3].style.display = "none";
+      workoutLevelOneItems[3].style.display = "";
+      clearInterval(countDecrement);
+      increseCountPlank();
+    }
+  }, 1000);
+};
+
+let decrementRestFour = () => {
+  let i = 31;
+  let countDecrement = setInterval(() => {
+    i--;
+    countRest[4].innerHTML = i;
+    if (i === -1) {
+      workoutRest[4].style.display = "none";
+      workoutLevelOneItems[4].style.display = "";
+      clearInterval(countDecrement);
+      increseCountCobra();
+    }
+  }, 1000);
+};
+
+let decrementRestFive = () => {
+  let i = 31;
+  let countDecrement = setInterval(() => {
+    i--;
+    countRest[5].innerHTML = i;
+    if (i === -1) {
+      workoutRest[5].style.display = "none";
+      workoutLevelOneItems[5].style.display = "";
+      clearInterval(countDecrement);
+      increseCountSpineLeft();
+    }
+  }, 1000);
+};
+
+let decrementRestSix = () => {
+  let i = 31;
+  let countDecrement = setInterval(() => {
+    i--;
+    countRest[6].innerHTML = i;
+    if (i === -1) {
+      workoutRest[6].style.display = "none";
+      workoutLevelOneItems[6].style.display = "";
+      clearInterval(countDecrement);
+      increseCountSpineRight();
+    }
+  }, 1000);
+};

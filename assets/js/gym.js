@@ -94,7 +94,7 @@ let start = () => {
         isCountingDown = true;
         levelTodo.style.display = "none";
         // rest.style.display = "";
-        workoutItems[0].style.display = "";
+        workoutRest[0].style.display = "";
         restWorkout();
 
         clearInterval(timer);
@@ -120,6 +120,8 @@ let restWorkout = () => {
     countRest[0].innerHTML = i;
 
     if (i === 0) {
+      workoutRest[0].style.display = "none";
+      workoutLevelOneItems[0].style.display = "";
       clearInterval(timer);
     }
   }, 1000);
