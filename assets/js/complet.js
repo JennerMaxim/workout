@@ -27,4 +27,7 @@ setCompleted();
 done.style.display = "none";
 
 let doItAgain = document.querySelectorAll(".do");
-doItAgain[0].onclick = () => start();
+doItAgain[0].onclick = () => {
+  done.style.display = "none";
+  start();
+};
