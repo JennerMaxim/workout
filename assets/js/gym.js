@@ -7,7 +7,6 @@ let header = document.getElementById("header");
 let ready = document.getElementById("ready");
 let footer = document.getElementById("footer");
 let jumping = document.getElementById("jumping");
-// let countRest = document.getElementById("count-rest");
 let rest = document.getElementById("rest");
 
 let setLevel = () => {
@@ -45,7 +44,6 @@ let setLevel1 = () => {
 setLevel1();
 
 levelTodo.style.display = "none";
-// rest.style.display = "none";
 
 let start = () => {
   level1Display.style.display = "none";
@@ -66,20 +64,17 @@ let start = () => {
     if (isCountingDown) {
       counter.style.display = "none";
       i--;
-      if (i <= 10) {
-        // countRest.innerHTML = i;
-        if (i <= 3) {
-          downCount.style.display = "";
-          downCount.innerHTML = i;
+      if (i <= 3) {
+        downCount.style.display = "";
+        downCount.innerHTML = i;
 
-          if (i === 0) {
-            isCountingDown = false;
-            header.style.display = "none";
-            ready.style.display = "none";
-            downCount.innerHTML = "Start";
-            downCount.style.borderRadius = "10px";
-            downCount.style.left = "32%";
-          }
+        if (i === 0) {
+          isCountingDown = false;
+          header.style.display = "none";
+          ready.style.display = "none";
+          downCount.innerHTML = "Start";
+          downCount.style.borderRadius = "10px";
+          downCount.style.left = "32%";
         }
       }
     } else {
@@ -90,10 +85,9 @@ let start = () => {
       downCount.style.display = "none";
       i++;
 
-      if (i === 21) {
+      if (i === 22) {
         isCountingDown = true;
         levelTodo.style.display = "none";
-        // rest.style.display = "";
         workoutRest[0].style.display = "";
         restWorkout();
 
@@ -116,13 +110,12 @@ let restWorkout = () => {
   let i = 11;
   let timer = setInterval(() => {
     i--;
-    // countRest.innerHTML = i;
     countRest[0].innerHTML = i;
 
-    if (i === 0) {
+    if (i === -1) {
+      clearInterval(timer);
       workoutRest[0].style.display = "none";
       workoutLevelOneItems[0].style.display = "";
-      clearInterval(timer);
     }
   }, 1000);
 };
@@ -141,18 +134,3 @@ let showWorkout = () => {
     `;
   }));
 };
-
-// let font = document.getElementById("font");
-// let font2 = document.getElementById("font2");
-// font2.style.display = "none";
-
-// let showfont2 = () => {
-//     font2.style.display = "";
-//     font.style.display = "none";
-//     // console.log(font2)
-// }
-
-// let showfont = () => {
-//     font2.style.display = "none";
-//     font.style.display = "";
-// }

@@ -57,28 +57,24 @@ let workouts = [
     img: "assets/img/plank.png",
     title: "PLANK",
     numb: "00:20",
-    // count: "✓",
     next: '<span class="next"> 0 </span> / 20',
   },
   {
     img: "assets/img/cobra.jpg",
     title: "COBRA STRETCH",
     numb: "00:30",
-    // count: "✓",
     next: '<span class="next"> 0 </span> / 30',
   },
   {
     img: "assets/img/spine_left.png",
     title: "SPINE LUMBAR TWIST STRETCH LEFT",
     numb: "00:30",
-    // count: "✓",
     next: '<span class="next"> 0 </span> / 30',
   },
   {
     img: "assets/img/spine_right.png",
     title: "SPINE LUMBAR TWIST STRETCH RIGHT",
     numb: "00:30",
-    // count: "✓",
     next: '<span class="next"> 0 </span> / 30',
   },
 ];
@@ -145,7 +141,6 @@ count[1].style.display = "none";
 count[2].style.display = "none";
 
 let nextSpan = document.querySelectorAll(".next");
-// nextSpan[0].innerHTML = 10;
 
 let increseCountPlank = () => {
   let i = 0;
@@ -194,14 +189,10 @@ let increseCountSpineRight = () => {
   let timer = setInterval(() => {
     i++;
     nextSpan[3].innerHTML = i;
-    if (i === 30) {
+    if (i === 31) {
       clearInterval(timer);
+      workoutLevelOneItems[6].style.display = "none";
+      done.style.display = "";
     }
   }, 1000);
 };
-
-// workoutLevelOneItems[3].document.getElementById("count").style.display = "none";
-// workoutLevelOneItems[4].getElementById("count").style.display = "none";
-// workoutLevelOneItems[5].getElementById("count").style.display = "none";
-// workoutLevelOneItems[6].getElementById("count").style.display = "none";
-// workoutLevelOneItems[7].getElementById("count").style.display = "none";

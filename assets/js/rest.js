@@ -1,5 +1,3 @@
-// let nextWorkout = document.getElementById("next-workout");
-
 let restWorkoutData = [
   {
     countRest: "",

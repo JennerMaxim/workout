@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  /* overflow: hidden; */
 }
 
 .gym .abs .font {
@@ -55,8 +54,6 @@
   opacity: 0.8;
   background-color: #000;
   color: #000;
-  /* display: none; */
-  /* filter: saturate(5); */
 }
 
 .gym .abs .font2 .back {
@@ -68,7 +65,6 @@
   background-color: #0000005b;
   border-radius: 50%;
   text-align: center;
-  display: none;
 }
 
 .gym .abs .font2 .title {
@@ -102,10 +98,6 @@
 }
 
 /* LEVEL 1 */
-/* .gym .abs .level1 {
-  display: none;
-} */
-
 .gym .abs .level1 .header {
   background-color: #000;
   color: #fff;
@@ -139,7 +131,6 @@
 .gym .abs .level1 .contents .content .workouts {
   display: flex;
   justify-content: space-between;
-  /* width: 100%; */
   padding: 0 20px;
   align-items: center;
   border: 1px solid #a79a9a;
@@ -168,10 +159,6 @@
   width: 100%;
   cursor: pointer;
 }
-
-/* .gym .abs .level-do{
-  display: none;
-} */
 
 .gym .abs .level-do .header {
   display: flex;
@@ -265,17 +252,6 @@
   padding-bottom: 3px;
 }
 
-/* .gym .abs .rest .next-workout img{
-  padding: 10px;
-} */
-
-/* LEVEL ONE */
-
-/* Workout */
-.gym .abs .level-one {
-  margin-top: 40px;
-  /* display: none; */
-}
 .gym .abs .level-one .img-workout img {
   width: 100%;
 }
@@ -300,19 +276,67 @@
   padding: 1px 13px;
   border-radius: 50%;
   font-size: 50px;
-  /* width: 100%; */
   cursor: pointer;
 }
 
 .gym .abs .level-one .count {
   position: fixed;
   bottom: 0;
-  /* left: 40%; */
   color: #fff;
   background-color: maroon;
   padding: 1px 13px;
-  /* border-radius: 50%; */
   font-size: 50px;
   width: 100%;
   text-align: center;
+}
+
+/* CONGRATULATION */
+.gym .abs .done .cong {
+  background-image: url("../img/done.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.gym .abs .done .cong .cup-level {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  background-color: #ffffff33;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.gym .abs .done .cong .cup-level .cup {
+  font-size: 100px;
+}
+
+.gym .abs .done .cong .cup-level .level-complited {
+  color: #fff;
+  text-align: center;
+}
+
+.gym .abs .done .cong .cup-level .level-complited .level {
+  color: maroon;
+  font-size: 30px;
+}
+
+.gym .abs .done .cong .cup-level .level-complited .complited {
+  font-size: 20px;
+}
+
+.gym .abs .done .cong .do {
+  position: absolute;
+  top: 80%;
+  color: maroon;
+  font-size: 30px;
+  left: 30%;
+  background-color: #ffffff77;
+  padding: 10px;
+  border-radius: 10px;
 }
