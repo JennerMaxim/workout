@@ -44,8 +44,10 @@ let setLevel1 = () => {
 setLevel1();
 
 levelTodo.style.display = "none";
-
+// let playAudios = document.getElementById("sound");
 let start = () => {
+  playSound[0].play();
+
   level1Display.style.display = "none";
   levelTodo.style.display = "";
 
@@ -65,6 +67,7 @@ let start = () => {
       counter.style.display = "none";
       i--;
       if (i <= 3) {
+        playSound[1].play();
         downCount.style.display = "";
         downCount.innerHTML = i;
 
