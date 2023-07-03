@@ -118,18 +118,21 @@ nextBtn[5].style.display = "none";
 nextBtn[6].style.display = "none";
 
 nextBtn[0].onclick = () => {
+  playSound[2].play();
   workoutLevelOneItems[0].style.display = "none";
   workoutRest[1].style.display = "";
   decrementRestOne();
 };
 
 nextBtn[1].onclick = () => {
+  playSound[4].play();
   workoutLevelOneItems[1].style.display = "none";
   workoutRest[2].style.display = "";
   decrementRestTwo();
 };
 
 nextBtn[2].onclick = () => {
+  playSound[6].play();
   workoutLevelOneItems[2].style.display = "none";
   workoutRest[3].style.display = "";
   decrementRestTree();

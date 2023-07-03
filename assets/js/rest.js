@@ -93,7 +93,9 @@ let decrementRestOne = () => {
   let countDecrement = setInterval(() => {
     i--;
     countRest[1].innerHTML = i;
-    if (i === -1) {
+    if (i === 3) {
+      playSound[3].play();
+    } else if (i === -1) {
       workoutRest[1].style.display = "none";
       workoutLevelOneItems[1].style.display = "";
       clearInterval(countDecrement);
@@ -106,7 +108,9 @@ let decrementRestTwo = () => {
   let countDecrement = setInterval(() => {
     i--;
     countRest[2].innerHTML = i;
-    if (i === -1) {
+    if (i === 3) {
+      playSound[5].play();
+    } else if (i === -1) {
       workoutRest[2].style.display = "none";
       workoutLevelOneItems[2].style.display = "";
       clearInterval(countDecrement);
@@ -119,6 +123,9 @@ let decrementRestTree = () => {
   let countDecrement = setInterval(() => {
     i--;
     countRest[3].innerHTML = i;
+    if (i === 3) {
+      playSound[7].play();
+    }
     if (i === -1) {
       workoutRest[3].style.display = "none";
       workoutLevelOneItems[3].style.display = "";
@@ -133,6 +140,9 @@ let decrementRestFour = () => {
   let countDecrement = setInterval(() => {
     i--;
     countRest[4].innerHTML = i;
+    if (i === 3) {
+      playSound[8].play();
+    }
     if (i === -1) {
       workoutRest[4].style.display = "none";
       workoutLevelOneItems[4].style.display = "";
@@ -147,6 +157,9 @@ let decrementRestFive = () => {
   let countDecrement = setInterval(() => {
     i--;
     countRest[5].innerHTML = i;
+    if (i === 3) {
+      playSound[9].play();
+    }
     if (i === -1) {
       workoutRest[5].style.display = "none";
       workoutLevelOneItems[5].style.display = "";

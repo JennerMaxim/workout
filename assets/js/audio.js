@@ -10,7 +10,7 @@ let audios = [
     suoud: "assets/audio/rest_climber.mp3",
   },
   {
-    suoud: "assets/audio/cimber.mp3",
+    suoud: "assets/audio/climber.mp3",
   },
   {
     suoud: "assets/audio/rest_heel.mp3",
